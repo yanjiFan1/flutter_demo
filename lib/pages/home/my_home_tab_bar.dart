@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:myappflutter/util/screen_utils.dart';
 import 'package:myappflutter/router.dart';
@@ -10,7 +12,7 @@ class HomeTabBar extends StatefulWidget implements PreferredSizeWidget {
   final double translate;
 
   HomeTabBar({Key key, this.tabBar, this.translate}) : super(key: key);
-
+  
   @override
   _HomeTabBarState createState() => _HomeTabBarState();
 
@@ -65,7 +67,7 @@ class _HomeTabBarState extends State<HomeTabBar> {
                       ),
                     ),
                     onTap: () {
-                      Router.push(context, Router.searchPage, '搜索流浪地球试一试');
+                      // Router.push(context, Router.searchPage, '搜索流浪地球试一试');
                     },
                   ),
                 )
