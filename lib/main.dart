@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:flutter/services.dart';
+import 'package:myappflutter/pages/main/main_page.dart';
 import 'package:myappflutter/pages/home/home_page.dart';
 import 'package:myappflutter/pages/school/school_page.dart';
 import 'package:myappflutter/pages/business/business_page.dart';
@@ -26,9 +27,10 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           resizeToAvoidBottomPadding: false,
           // body: SplashWidget(),
-          body: HomePage(),
+          body: MainPage(),
         ),
         routes: <String,WidgetBuilder>{
+          'homePage':(_)=> HomePage(),
           'schoolPage':(_)=> SchoolPage(),
           'businessPage':(_)=> BusinessPage()
         }, 

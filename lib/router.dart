@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:myappflutter/pages/main/main_page.dart';
 import 'package:myappflutter/pages/home/home_page.dart';
 import 'package:myappflutter/pages/school/school_page.dart';
 import 'package:myappflutter/pages/business/business_page.dart';
@@ -8,7 +9,8 @@ import 'package:myappflutter/pages/web_view_page.dart';
 ///https://www.jianshu.com/p/b9d6ec92926f
 
 class Router {
-  static const homePage = 'app://';
+  static const mainPage = 'app://';
+  static const homePage = 'app://homepage';
   static const schoolPage = 'app://schoolpage';
   static const businessPage = 'app://businesspage';
   // static const detailPage = 'app://DetailPage';
@@ -34,6 +36,8 @@ class Router {
       switch (url) {
         // case detailPage:
         //   return DetailPage(params);
+        case mainPage:
+          return MainPage();
         case homePage:
           return HomePage();
         case schoolPage:
